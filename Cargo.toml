@@ -1,0 +1,26 @@
+﻿[package]
+name = "agentropic-patterns"
+version = "0.1.0"
+edition = "2021"
+authors = ["Agentropic <agentropic@gmail.com>"]
+license = "MIT OR Apache-2.0"
+description = "Organizational patterns and architectures for multi-agent systems"
+repository = "https://github.com/agentropic/agentropic-patterns"
+documentation = "https://docs.rs/agentropic-patterns"
+keywords = ["agents", "patterns", "multi-agent", "organization", "coordination"]
+categories = ["simulation", "algorithms"]
+readme = "README.md"
+
+[dependencies]
+agentropic-core = { git = "https://github.com/pycogram/agentropic-core", branch = "main" }
+agentropic-messaging = { git = "https://github.com/pycogram/agentropic-messaging", branch = "main" }
+agentropic-cognition = { git = "https://github.com/pycogram/agentropic-cognition", branch = "main" }
+
+async-trait = "0.1"
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "1.0"
+tracing = "0.1"
+
+[dev-dependencies]
+tokio-test = "0.4"
